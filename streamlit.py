@@ -119,41 +119,29 @@ def load_model():
 
 def display_prediction():
     st.title('ASD Prediction Test')
-    st.markdown('Answer the following 10 questions to know the scores and predict the likelihood of having ASD.')
+    st.markdown('Answer the following 10 questions to know the scores and predict the likelihood of having ASD. Select 1 for agree; 0 for disagree. ')
+    
     # Add content for the prediction page
     # Input scores
-    a1 = st.slider("I often notice small sounds when others do not.", 0, 1, step=1)
-    a2 = st.slider("I usually concentrate more on the whole picture, rather than the small details.", 0, 1, step=1)
-    a3 = st.slider("I find it easy to do more than one thing at once.", 0, 1, step=1)
-    a4 = st.slider("If there is an interruption, I can switch back to what I was doing very quickly.", 0, 1, step=1)
-    a5 = st.slider("I find it easy to 'read between the lines' when someone is talking to me.", 0, 1, step=1)
-    a6 = st.slider("I know how to tell if someone listening to me is getting bored.", 0, 1, step=1)
-    a7 = st.slider("When I'm reading a story, I find it difficult to work out the character's intention.", 0, 1, step=1)
-    a8 = st.slider("I like to collect information about categories of things (e.g. types of car, types of bird, types of train, types of plant, etc.)", 0, 1, step=1)
-    a9 = st.slider("I find it easy to work out what someone is thinking or feeling just by looking at their face.", 0, 1, step=1)
-    a10 = st.slider("I find it difficult to work out people’s intentions.", 0, 1, step=1)
+    a1 = st.selectbox("I often notice small sounds when others do not.", [0, 1])
+    a2 = st.selectbox("I usually concentrate more on the whole picture, rather than the small details.", [0, 1])
+    a3 = st.selectbox("I find it easy to do more than one thing at once.", [0, 1])
+    a4 = st.selectbox("If there is an interruption, I can switch back to what I was doing very quickly.", [0, 1])
+    a5 = st.selectbox("I find it easy to 'read between the lines' when someone is talking to me.", [0, 1])
+    a6 = st.selectbox("I know how to tell if someone listening to me is getting bored.", [0, 1])
+    a7 = st.selectbox("When I'm reading a story, I find it difficult to work out the character's intention.", [0, 1])
+    a8 = st.selectbox("I like to collect information about categories of things (e.g. types of car, types of bird, types of train, types of plant, etc.)", [0, 1])
+    a9 = st.selectbox("I find it easy to work out what someone is thinking or feeling just by looking at their face.", [0, 1])
+    a10 = st.selectbox("I find it difficult to work out people’s intentions.", [0, 1])
 
-    # Input result
-    result = st.number_input("Result", format="%.5f")
+    # Calculate total score
+    total_score = a1 + (1 - a2) + (1 - a3) + (1 - a4) + (1 - a5) + (1 - a6) + a7 + a8 + (1 - a9) + a10
 
-    # Create feature list
-    feature_list = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, result]
-
-    # Convert feature list to numpy array
-    user_input = np.array(feature_list).reshape(1, -1)
-    
-    if st.button("PREDICT"):
-        loaded_model = load_model()
-        prediction = loaded_model.predict(user_input)
-
-    if prediction is not None:
-            if prediction[0] == 1:
-                st.write("The person HAS Autism.")
-            else:
-                st.write("The person DOES NOT HAVE Autism.")
+    # Determine prediction result
+    if total_score >= 6:
+        st.write("The patient has autism.")
     else:
-        st.write("Error: Unable to make a prediction.")
-
+        st.write("The patient does not have autism.")
 
 def display_other_information():
     st.title('Other Information')
