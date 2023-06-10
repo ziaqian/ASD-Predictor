@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 import seaborn as sns
 import plotly.express as px
+import pickle
+import numpy as np
 
 # Load your analysis data
 df = pd.read_csv("ASD_data.csv")
@@ -110,11 +112,45 @@ def display_analysis():
     plot_gender()
     plot_age()
     plot_country_of_residence()
+    
+def load_model():
+    loaded_model = pickle.load(open("ASD_model_1.sav", 'rb'))
+    return loaded_model
 
 def display_prediction():
     st.title('ASD Prediction Test')
     st.markdown('Answer the following 10 questions to know the scores and predict the likelihood of having ASD.')
     # Add content for the prediction page
+    # Input scores
+    a1 = st.slider("I often notice small sounds when others do not.", 0, 1, step=1)
+    a2 = st.slider("I usually concentrate more on the whole picture, rather than the small details.", 0, 1, step=1)
+    a3 = st.slider("I find it easy to do more than one thing at once.", 0, 1, step=1)
+    a4 = st.slider("If there is an interruption, I can switch back to what I was doing very quickly.", 0, 1, step=1)
+    a5 = st.slider("I find it easy to 'read between the lines' when someone is talking to me.", 0, 1, step=1)
+    a6 = st.slider("I know how to tell if someone listening to me is getting bored.", 0, 1, step=1)
+    a7 = st.slider("When I'm reading a story, I find it difficult to work out the character's intention.", 0, 1, step=1)
+    a8 = st.slider("I like to collect information about categories of things (e.g. types of car, types of bird, types of train, types of plant, etc.)", 0, 1, step=1)
+    a9 = st.slider("I find it easy to work out what someone is thinking or feeling just by looking at their face.", 0, 1, step=1)
+    a10 = st.slider("I find it difficult to work out people’s intentions.", 0, 1, step=1)
+
+    # Input result
+    result = st.number_input("Result", format="%.5f")
+
+    # Create feature list
+    feature_list = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, result]
+
+    # Convert feature list to numpy array
+    user_input = np.array(feature_list).reshape(1, -1)
+    
+    if st.button("PREDICT"):
+    loaded_model = load_model()
+    prediction = loaded_model.predict(user_input)
+
+    if prediction == 1:
+        st.write("The person HAS Autism.")
+    else:
+        st.write("The person DOES NOT HAVE Autism.")
+
 
 def display_other_information():
     st.title('Other Information')
