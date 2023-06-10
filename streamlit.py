@@ -132,16 +132,18 @@ def display_prediction():
     a9 = st.selectbox("9. I find it easy to work out what someone is thinking or feeling just by looking at their face.", [0, 1])
     a10 = st.selectbox("10. I find it difficult to work out people’s intentions.", [0, 1])
 
-
     # Calculate total score
     total_score = a1 + (1 - a2) + (1 - a3) + (1 - a4) + (1 - a5) + (1 - a6) + a7 + a8 + (1 - a9) + a10
-
+    result=""
     # Determine prediction result
     if st.button("Predict"):
         if total_score >= 6:
-            st.write("The patient has autism.")
+            result="The patient has autism."
         else:
-            st.write("The patient does not have autism.")
+            result="The patient does not have autism."
+            
+    st.code(result)
+    st.text("")
 
 def display_other_information():
     st.title('Other Information')
