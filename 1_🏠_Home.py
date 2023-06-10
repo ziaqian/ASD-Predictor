@@ -84,4 +84,4 @@ st.write(
 st.text("")
 st.write("---")
 st.text("")
-st.markdown("<h2 style='text-align: center; color: grey;'>\"Clues bring us one step closer to the Truth\"</h2>", unsafe_allow_html=True)
+st.markdown("<h2 style='text-align: center; color: grey;'>\"ASD Predictor: Empowering Early Intervention, Unleashing Potential", unsafe_allow_html=True)
