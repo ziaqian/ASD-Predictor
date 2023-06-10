@@ -16,53 +16,53 @@ st.sidebar.success("Select a page above")
 st.write("---")
 st.text("")
 
-#input A1 Score
-a1=st.number_input("I often notice small sounds when others do not. (1 for agree; 0 for disagree)")
-st.write(a1 , " score")
+# Input A1 Score
+a1 = st.slider("I often notice small sounds when others do not.(1 for agree; 0 for disagree)", 0, 1, step=1)
+st.write(a1, "score")
 st.text("")
 
 #input A2 Score
-a2=st.number_input("I usually concentrate more on the whole picture, rather than the small details.(1 for agree; 0 for disagree)")
+a2=st.slider("I usually concentrate more on the whole picture, rather than the small details.(1 for agree; 0 for disagree)",0, 1, step=1)
 st.write(a2 ," score")
 st.text("")
 
 #input  A3 Score
-a3=st.number_input("I find it easy to do more than one thing at once.(1 for agree; 0 for disagree)")
+a3=st.slider("I find it easy to do more than one thing at once.(1 for agree; 0 for disagree)",0, 1, step=1)
 st.write(a3 ," score")
 st.text("")
 
 #input A4 Score
-a4=st.number_input("If there is an interruption, I can switch back to what i was doing very quickly.(1 for agree; 0 for disagree)")
+a4=st.slider("If there is an interruption, I can switch back to what i was doing very quickly.(1 for agree; 0 for disagree)",0, 1, step=1)
 st.write(a4 ," score")
 st.text("")
 
 #input A5 Score
-a5=st.number_input("I find it easy to 'read between the lines' when someone is talking to me.(1 for agree; 0 for disagree)")
+a5=st.slider("I find it easy to 'read between the lines' when someone is talking to me.(1 for agree; 0 for disagree)",0, 1, step=1)
 st.write(a5 ," score")
 st.text("")
 
 #input A6 Score
-a6=st.number_input("I know how to tell if someone listening to me is getting bored.(1 for agree; 0 for disagree)")
+a6=st.slider("I know how to tell if someone listening to me is getting bored.(1 for agree; 0 for disagree)",0, 1, step=1)
 st.write(a6 ," score")
 st.text("")
 
 # input A7 Score
-a7=st.number_input("When I'm reading a story, I find it difficult to work out the character's intention.(1 for agree; 0 for disagree)")
+a7=st.slider("When I'm reading a story, I find it difficult to work out the character's intention.(1 for agree; 0 for disagree)",0, 1, step=1)
 st.write(a7 ," score")
 st.text("")
 
 #input  A8 Score
-a8=st.number_input("I like to collect information about categories of things(e.g. types of car, types of bird, types of train, types of plant etc).(1 for agree; 0 for disagree)")
+a8=st.slider("I like to collect information about categories of things(e.g. types of car, types of bird, types of train, types of plant etc).(1 for agree; 0 for disagree)",0, 1, step=1)
 st.write(a8 ," score")
 st.text("")
 
 #input  A9 Score
-a9=st.number_input("I find it easy to work out what someone is thinking or feeling just by looking at their face.(1 for agree; 0 for disagree)")
+a9=st.slider("I find it easy to work out what someone is thinking or feeling just by looking at their face.(1 for agree; 0 for disagree)",0, 1, step=1)
 st.write(a9 ," score")
 st.text("")
 
 #input  A10 Score
-a10=st.number_input("I find it difficult to work out people’s intentions.(1 for agree; 0 for disagree)")
+a10=st.slider("I find it difficult to work out people’s intentions.(1 for agree; 0 for disagree)",0, 1, step=1)
 st.write(a10 ," score")
 st.text("")
 
