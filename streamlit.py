@@ -143,8 +143,8 @@ def display_prediction():
     user_input = np.array(feature_list).reshape(1, -1)
     
     if st.button("PREDICT"):
-    loaded_model = load_model()
-    prediction = loaded_model.predict(user_input)
+        loaded_model = load_model()
+        prediction = loaded_model.predict(user_input)
 
     if prediction == 1:
         st.write("The person HAS Autism.")
