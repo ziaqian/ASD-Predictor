@@ -5,7 +5,7 @@ import sklearn
 
 # Function to load the model
 def load_model():
-    loaded_model = pickle.load(open("ASD_model.sav", 'rb'))
+    loaded_model = pickle.load(open("ASD_model%20(1).sav", 'rb'))
     return loaded_model
 
 
@@ -66,7 +66,11 @@ a10=st.slider("I find it difficult to work out people’s intentions.(1 for agre
 st.write(a10 ," score")
 st.text("")
 
-feature_list=[a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,]
+imput result
+result=st.number_input("Result",format="%.3f")
+st.write(result )
+st.text("")
+feature_list=[a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,result,]
 
 user_input=np.array(feature_list).reshape(1,-1)
 
