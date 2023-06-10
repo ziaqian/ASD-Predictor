@@ -49,19 +49,13 @@ st.write(
 st.text("")
 st.write("---")
 st.text("")
-st.header("Limitation of the Model")
+st.header("Limitations")
 st.write(
  """
-  * The prediction model provides a binary result indicating whether or not a patient is likely to have liver disease based on the available data and variables. However, it is important to note that it does not provide a probability of getting liver disease. For further confirmation, extra tests need to be conducted if needed. 
+  * Our prediction model relies on the available data and variables utilized in the analysis. However, it is important to note that there may be additional significant factors not accounted for in the analysis, potentially impacting the accuracy of the predictions.
   
-  * The prediction model is based on the available data and variables used in the analysis. There may be other important factors that were not included in the analysis, which could affect the accuracy of the prediction.
-  
-  * The website does not provide a diagnosis or treatment plan. The treatment plan should be executed based on patients' bodies' condition in real life and their medical history. Professional advice from medical professional is needed to treat the disease. 
-  
-  * It is important to note that this website is used as a tool to supplement and not replace medical advice from medical professional. It should not be considered as a substitute for medical advice or consultation with a health care provider for proper evaluation and diagnosis.
-  
-  * This website does not provided a comprehensive assessment of a person's overall health as overall health does not solely based on the condition of liver.
-
+  * The apllication should be viewed as a screening tool and not a diagnostic tool. It can provide insights and indications regarding the likelihood of ASD, but it cannot replace a comprehensive evaluation conducted by qualified healthcare professionals for a definitive diagnosis.
+ 
  """
 )
 st.text("")
