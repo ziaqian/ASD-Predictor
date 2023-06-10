@@ -112,10 +112,7 @@ def display_analysis():
     plot_gender()
     plot_age()
     plot_country_of_residence()
-    
-def load_model():
-    loaded_model = pickle.load(open("ASD_model_1.sav", 'rb'))
-    return loaded_model
+   
 
 def display_prediction():
     st.title('ASD Prediction Test')
