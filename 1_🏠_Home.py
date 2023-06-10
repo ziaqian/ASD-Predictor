@@ -50,7 +50,7 @@ st.write(
 st.text("")
 st.write("---")
 st.text("")
-st.header("Limitations")
+st.subheader("Limitations")
 st.write(
  """
  * Our prediction model relies on the available data and variables utilized in the analysis. However, it is important to note that there may be additional significant factors not accounted for in the analysis, potentially impacting the accuracy of the predictions.
