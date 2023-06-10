@@ -4,23 +4,10 @@ import seaborn as sns
 import plotly.express as px
 
 
-
 st.set_page_config(page_title="ASD Predictor",page_icon="🧑‍⚕️")
 #Function to display the content in the Home Page
 st.title("Analysis")
 st.sidebar.success("Select a page above")
-
-st.subheader("ABOUT LIVER DISEASE")
-
-st.text("")
-st.write(
-    """
-
-    Below is  a picture of the various condition of a liver 
-
-    """
-    )  
-
 
 # Load your analysis data
 df = pd.read_csv("ASD_data.csv")
@@ -30,12 +17,11 @@ custom_colors = ['#636EFA', '#EF553B', '#00CC96', '#AB63FA', '#FFA15A', '#19D3F3
 
 
 def display_analysis():
-    st.title('Analysis of data sets')
+    st.subheader("ANALYSIS OF ASD DATASETS")
     plot_ethnicity()
     plot_gender()
     plot_age()
     plot_country_of_residence()
-
 
 
 def plot_ethnicity():
