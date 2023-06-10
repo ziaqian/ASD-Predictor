@@ -72,7 +72,7 @@ st.write(result )
 st.text("")
 feature_list=[a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,result,]
 
-user_input=np.array(feature_list).reshape(1,-1)
+user_input=np.array(feature_list).reshape(1,11)
 
 
 if st.button("PREDICT"):
