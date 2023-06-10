@@ -9,7 +9,7 @@ st.sidebar.success("Select a page above")
 st.write("---")
 st.text("")
 
-st.title('ASD Prediction Test')
+st.subheader('ASD Prediction Test')
 st.markdown('Answer the following 10 questions to predict the likelihood of having ASD. Select 1 for agree; 0 for disagree. ')
     
 # Input scores
