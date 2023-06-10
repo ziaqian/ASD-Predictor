@@ -4,7 +4,7 @@ import seaborn as sns
 import plotly.express as px
 
 # Load your analysis data
-df = pd.read_csv(r"C:\Users\60111\Documents\WIE 2003- IDS\IDS GROUP PROJECT\ASD_data.csv")
+df = pd.read_csv("ASD_data.csv")
 
 # Define custom colors for the graphs
 custom_colors = ['#636EFA', '#EF553B', '#00CC96', '#AB63FA', '#FFA15A', '#19D3F3']
