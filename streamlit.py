@@ -159,18 +159,23 @@ def display_other_information():
     st.title('Other Information')
     # Add content for the other information page
     st.header('What is Autism?')
+    st.image("what-is-autism-spectrum-disorder.jpg")
     st.write("Autism, or Autism Spectrum Disorder (ASD), is a neurodevelopmental disorder that typically appears in early childhood and lasts throughout a person's lifetime. It affects how individuals perceive the world, interact with others, and communicate.")
 
     st.header('Signs and Symptoms of Autism')
-    st.write("Common signs and symptoms of autism may include difficulties in social interaction, communication challenges, repetitive behaviors, sensory sensitivities, and specific interests or fixations. However, it's important to remember that autism is a spectrum disorder, and each individual may exhibit a unique combination of strengths and difficulties.")
+    st.markdown("- Difficulties in social interaction")
+    st.markdown("- Communication challenges")
+    st.markdown("- Repetitive behaviors")
+    st.markdown("- Sensory sensitivities")
+    st.markdown("- Specific interests or fixations")
+    st.write("It's important to remember that autism is a spectrum disorder, and each individual may exhibit a unique combination of strengths and difficulties.")
     
     st.header('Early Detection and Diagnosis')
     st.write("Early detection and diagnosis of autism can be crucial for accessing appropriate interventions and support. If you suspect that your child or someone you know may have autism, it's recommended to consult with a healthcare professional, such as a pediatrician or a developmental specialist, who can conduct a comprehensive evaluation.")
     
     st.header('Treatment and Support')
     st.write("Early intervention and appropriate support for individuals with autism can make a significant difference in their quality of life. Treatment approaches may include behavioral therapies, speech therapy, occupational therapy, and educational interventions tailored to the individual's specific needs.")
-
-    st.header('Supporting Individuals with Autism')
+    st.write("")
     st.write("Creating a supportive environment for individuals with autism is essential. This can include fostering understanding and acceptance, promoting inclusive education and employment opportunities, and providing access to community resources and support groups. It is important to recognize and respect the unique strengths and challenges of each individual with autism.")
 
     st.header('Additional Resources')
