@@ -5,7 +5,7 @@ import sklearn
 
 # Function to load the model
 def load_model():
-    loaded_model = pickle.load(open("ASD_model%20(1).sav", 'rb'))
+    loaded_model = pickle.load(open("ASD_model_1.sav", 'rb'))
     return loaded_model
 
 
