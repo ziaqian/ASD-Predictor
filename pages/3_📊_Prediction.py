@@ -13,7 +13,7 @@ st.subheader('ASD Prediction Test')
 st.markdown('Answer the following 10 questions to predict the likelihood of having ASD. Select 1 for agree; 0 for disagree. ')
     
 # Input scores
-a1 = st.selectbox("I often notice small sounds when others do not.", [0, 1])
+a1 = st.selectbox("1. I often notice small sounds when others do not.", [0, 1])
 a2 = st.selectbox("I usually concentrate more on the whole picture, rather than the small details.", [0, 1])
 a3 = st.selectbox("I find it easy to do more than one thing at once.", [0, 1])
 a4 = st.selectbox("If there is an interruption, I can switch back to what I was doing very quickly.", [0, 1])
