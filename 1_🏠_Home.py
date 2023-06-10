@@ -7,17 +7,16 @@ st.title("HOME")
 st.sidebar.success("Select a page above")
 
 st.text("")
-st.subheader("Welcome to the Autism Spectrum Disorder(ASD) Predictor Project homepage! ")
+st.subheader("Introduction")
 st.write(
  """
+Welcome to the Autism Spectrum Disorder(ASD) Predictor Project homepage! 
+ 
 Our ASD Predictor application is an innovative tool designed to assist in the prediction of Autism Spectrum Disorder (ASD) in adults. We understand the importance of early detection and intervention to improve the well-being and quality of life for individuals with ASD.
  
 We have conducted extensive research and analysis to develop a robust prediction model for the public. Our findings are based on comprehensive data analysis, including behavioral characteristics, communication patterns, social interactions, and other relevant factors associated with ASD.
  """
 )
-
-st.image("")
-
 
 st.text("")
 st.write("---")
