@@ -28,7 +28,7 @@ st.write(
 
  Early detection and diagnosis of ASD in adulthood are crucial for individuals to receive appropriate interventions, therapies, and support services. However, there is a need to improve the identification and prediction of ASD, as it can be challenging to recognize the symptoms and distinguish them from other conditions.
  
- Therefore, our problem statement is how can we use machine learning to help in predicting ASD for early detection.
+ Therefore, our problem statement is how can we analyse and predict the likelihood of ASD for early detection.
  """   
 )
 
@@ -55,7 +55,7 @@ st.write(
  """
  * Our prediction model relies on the available data and variables utilized in the analysis. However, it is important to note that there may be additional significant factors not accounted for in the analysis, potentially impacting the accuracy of the predictions.
   
- * The apllication should be viewed as a screening tool and not a diagnostic tool. It can provide insights and indications regarding the likelihood of ASD, but it cannot replace a comprehensive evaluation conducted by qualified healthcare professionals for a definitive diagnosis.
+ * The aplication should be viewed as a screening tool and not a diagnostic tool. It can provide insights and indications regarding the likelihood of ASD, but it cannot replace a comprehensive evaluation conducted by qualified healthcare professionals for a definitive diagnosis.
  
  """
 )
