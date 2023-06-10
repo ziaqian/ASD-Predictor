@@ -146,10 +146,13 @@ def display_prediction():
         loaded_model = load_model()
         prediction = loaded_model.predict(user_input)
 
-    if prediction == 1:
-        st.write("The person HAS Autism.")
+    if prediction is not None:
+            if prediction[0] == 1:
+                st.write("The person HAS Autism.")
+            else:
+                st.write("The person DOES NOT HAVE Autism.")
     else:
-        st.write("The person DOES NOT HAVE Autism.")
+        st.write("Error: Unable to make a prediction.")
 
 
 def display_other_information():
