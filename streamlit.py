@@ -158,6 +158,28 @@ def display_prediction():
 def display_other_information():
     st.title('Other Information')
     # Add content for the other information page
+    st.header('What is Autism?')
+    st.write("Autism, or Autism Spectrum Disorder (ASD), is a neurodevelopmental disorder that typically appears in early childhood and lasts throughout a person's lifetime. It affects how individuals perceive the world, interact with others, and communicate.")
+
+    st.header('Causes of Autism')
+    st.write("The exact causes of autism are not fully understood, but it is believed to result from a combination of genetic and environmental factors. Research suggests that certain genes may increase the risk of developing autism, but additional factors, such as prenatal influences and early brain development, may also play a role.")
+
+    st.header('Diagnosing Autism')
+    st.write("Autism is typically diagnosed through a comprehensive evaluation conducted by healthcare professionals, such as pediatricians, psychologists, or developmental specialists. The evaluation may involve observing the individual's behavior, assessing their communication and social skills, and considering their developmental history.")
+
+    st.header('Treatment and Support')
+    st.write("While there is no cure for autism, early intervention and appropriate support can make a significant difference in an individual's quality of life. Treatment approaches may include behavioral therapies, speech therapy, occupational therapy, and educational interventions tailored to the individual's specific needs.")
+
+    st.header('Supporting Individuals with Autism')
+    st.write("Creating a supportive environment for individuals with autism is essential. This can include fostering understanding and acceptance, promoting inclusive education and employment opportunities, and providing access to community resources and support groups. It is important to recognize and respect the unique strengths and challenges of each individual with autism.")
+
+    st.header('Additional Resources')
+    st.write("If you would like to learn more about autism or seek support, here are some reputable organizations and resources:")
+    st.write("- Autism Speaks (https://www.autismspeaks.org/)")
+    st.write("- Autism Society (https://www.autism-society.org/)")
+    st.write("- National Autistic Society (https://www.autism.org.uk/)")
+    st.write("- Centers for Disease Control and Prevention - Autism Information (https://www.cdc.gov/ncbddd/autism/index.html)")
+
 
 def plot_ethnicity():
     ethnicity_counts = df['Ethnicity'].value_counts()
