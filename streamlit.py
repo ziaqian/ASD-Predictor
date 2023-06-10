@@ -119,24 +119,22 @@ def load_model():
 
 def display_prediction():
     st.title('ASD Prediction Test')
-    st.markdown('Answer the following 10 questions to know the scores and predict the likelihood of having ASD. Select 1 for agree; 0 for disagree. ')
+    st.markdown('Answer the following 10 questions to know the scores and predict the likelihood of having ASD. ')
+    st.markdown('Select 1 for agree; 0 for disagree. ')
     
     # Add content for the prediction page
     # Input scores
-    a1 = st.selectbox("I often notice small sounds when others do not.", [0, 1])
-    a2 = st.selectbox("I usually concentrate more on the whole picture, rather than the small details.", [0, 1])
-    a3 = st.selectbox("I find it easy to do more than one thing at once.", [0, 1])
-    a4 = st.selectbox("If there is an interruption, I can switch back to what I was doing very quickly.", [0, 1])
-    a5 = st.selectbox("I find it easy to 'read between the lines' when someone is talking to me.", [0, 1])
-    a6 = st.selectbox("I know how to tell if someone listening to me is getting bored.", [0, 1])
-    a7 = st.selectbox("When I'm reading a story, I find it difficult to work out the character's intention.", [0, 1])
-    a8 = st.selectbox("I like to collect information about categories of things (e.g. types of car, types of bird, types of train, types of plant, etc.)", [0, 1])
-    a9 = st.selectbox("I find it easy to work out what someone is thinking or feeling just by looking at their face.", [0, 1])
-    a10 = st.selectbox("I find it difficult to work out people’s intentions.", [0, 1])
+    a1 = st.selectbox("1. I often notice small sounds when others do not.", [0, 1])
+    a2 = st.selectbox("2. I usually concentrate more on the whole picture, rather than the small details.", [0, 1])
+    a3 = st.selectbox("3. I find it easy to do more than one thing at once.", [0, 1])
+    a4 = st.selectbox("4. If there is an interruption, I can switch back to what I was doing very quickly.", [0, 1])
+    a5 = st.selectbox("5. I find it easy to 'read between the lines' when someone is talking to me.", [0, 1])
+    a6 = st.selectbox("6. I know how to tell if someone listening to me is getting bored.", [0, 1])
+    a7 = st.selectbox("7. When I'm reading a story, I find it difficult to work out the character's intention.", [0, 1])
+    a8 = st.selectbox("8. I like to collect information about categories of things (e.g. types of car, types of bird, types of train, types of plant, etc.)", [0, 1])
+    a9 = st.selectbox("9. I find it easy to work out what someone is thinking or feeling just by looking at their face.", [0, 1])
+    a10 = st.selectbox("10. I find it difficult to work out people’s intentions.", [0, 1])
 
-    # Disable rerun protection for the prediction section
-    with st.spinner("Predicting..."):
-        st.experimental_rerun()
 
     # Calculate total score
     total_score = a1 + (1 - a2) + (1 - a3) + (1 - a4) + (1 - a5) + (1 - a6) + a7 + a8 + (1 - a9) + a10
