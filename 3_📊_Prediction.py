@@ -66,7 +66,7 @@ a10=st.slider("I find it difficult to work out people’s intentions.(1 for agre
 st.write(a10 ," score")
 st.text("")
 
-imput result
+#input result
 result=st.number_input("Result",format="%.3f")
 st.write(result )
 st.text("")
