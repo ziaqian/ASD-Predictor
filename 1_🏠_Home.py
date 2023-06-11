@@ -8,6 +8,7 @@ st.sidebar.success("Select a page above")
 
 st.text("")
 st.subheader("Introduction")
+st.image("what-is-autism-spectrum-disorder.jpg")
 st.write(
  """
  Welcome to the Autism Spectrum Disorder(ASD) Predictor Project homepage! 
