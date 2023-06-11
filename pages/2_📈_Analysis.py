@@ -23,7 +23,6 @@ def display_analysis():
     plot_age()
     plot_country_of_residence()
     plot_jaundice()
-    plot_age1()
 
 def plot_ethnicity():
     ethnicity_counts = df['Ethnicity'].value_counts()
@@ -50,15 +49,6 @@ def plot_age():
     fig.update_layout(title='ASD by Age', xaxis_title='Age', yaxis_title='Density')
     st.plotly_chart(fig)
     
-def plot_age1():
-    # Filter data for people diagnosed with ASD
-    asd_1_data = df[df['Class/ASD'] == 1]
-
-    fig = px.histogram(asd_1_data, x='Age', histnorm='density', nbins=10, title='ASD by Age',
-                       color_discrete_sequence=[custom_colors[0]])
-    fig.update_traces(opacity=0.7)  # Adjust the opacity of the bars
-    fig.update_layout(title='ASD by Age', xaxis_title='Age', yaxis_title='Density')
-    st.plotly_chart(fig)
     
 def plot_country_of_residence():
     country_counts = df['Country_Of_Residence'].value_counts().reset_index()
