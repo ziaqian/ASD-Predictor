@@ -31,9 +31,9 @@ if st.button("Predict"):
   result=""
   # Determine prediction result
   if total_score >= 6:
-    result="The patient has autism."
+    result="The patient has higher possibility to have autism."
   else:
-    result="The patient does not have autism."
+    result="The patient has lower possibility to have autism."
     
   st.code(result)
   st.text("")
