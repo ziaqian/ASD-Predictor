@@ -3,7 +3,7 @@ import pandas as pd
 
 st.set_page_config(page_title="ASD Predictor",page_icon="🧑‍⚕️")
 #Function to display the content in the Home Page
-st.title("Homepage")
+st.title("Home page")
 st.sidebar.success("Select a page above")
 
 st.text("")
@@ -11,7 +11,7 @@ st.subheader("Introduction")
 st.image("ASD.png")
 st.write(
  """
- Welcome to the Autism Spectrum Disorder(ASD) Predictor Project homepage! 
+ Welcome to the Autism Spectrum Disorder(ASD) Predictor Project home page! 
  
  Our ASD Predictor application is an innovative tool designed to assist in the prediction of Autism Spectrum Disorder (ASD) in adults. We understand the importance of early detection and intervention to improve the well-being and quality of life for individuals with ASD.
  
@@ -43,7 +43,7 @@ st.write(
 
  * Early detection: Early detection can help in improving the quality of life of individuals with ASD. 
  
- * Data analysis: Presents data on the realationship between different variables, provide a glimpse into the patterns and trends of ASD.
+ * Data analysis: Presents data on the relationship between different variables, provide a glimpse into the patterns and trends of ASD.
  
  * Improve Access to Services: To connect individuals with ASD to specialized services and support networks.
  """   
@@ -56,7 +56,7 @@ st.write(
  """
  * Our prediction model relies on the available data and variables utilized in the analysis. However, it is important to note that there may be additional significant factors not accounted for in the analysis, potentially impacting the accuracy of the predictions.
   
- * The aplication should be viewed as a screening tool and not a diagnostic tool. It can provide insights and indications regarding the likelihood of ASD, but it cannot replace a comprehensive evaluation conducted by qualified healthcare professionals for a definitive diagnosis.
+ * The application should be viewed as a screening tool and not a diagnostic tool. It can provide insights and indications regarding the likelihood of ASD, but it cannot replace a comprehensive evaluation conducted by qualified healthcare professionals for a definitive diagnosis.
  
  """
 )
