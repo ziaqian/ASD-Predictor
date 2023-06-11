@@ -23,6 +23,7 @@ def display_analysis():
     plot_age()
     plot_country_of_residence()
     plot_jaundice()
+    plot_age1()
 
 def plot_ethnicity():
     ethnicity_counts = df['Ethnicity'].value_counts()
@@ -48,7 +49,33 @@ def plot_age():
     fig.update_traces(opacity=0.7)  # Adjust the opacity of the bars
     fig.update_layout(title='ASD by Age', xaxis_title='Age', yaxis_title='Density')
     st.plotly_chart(fig)
+    
+def plot_age1():
+    # Filter data for people diagnosed with ASD
+    asd_1_data = df[df['Class/ASD'] == 1]
 
+    # Set plot style
+    sns.set(style="whitegrid")
+
+    # Create a figure and axis
+    fig, ax = plt.subplots()
+
+    # Plot histogram of age for people diagnosed with ASD
+    sns.histplot(asd_1_data['Age'], kde=True, color='skyblue', ax=ax)
+
+    # Set labels and title
+    ax.set_xlabel('Age')
+    ax.set_ylabel('Count')
+    ax.set_title('Distribution of Age for People Diagnosed with ASD')
+
+    # Add a vertical line for the mean age
+    mean_age = asd_1_data['Age'].mean()
+    ax.axvline(mean_age, color='red', linestyle='--', label=f'Mean Age: {mean_age:.2f}')
+    ax.legend()
+
+    # Show the plot
+    st.pyplot(fig)
+    
 def plot_country_of_residence():
     country_counts = df['Country_Of_Residence'].value_counts().reset_index()
     country_counts.columns = ['Country', 'Count']
