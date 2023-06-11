@@ -23,6 +23,7 @@ def display_analysis():
     plot_age()
     plot_country_of_residence()
     plot_jaundice()
+    plot_geneticRoot()
 
 def plot_ethnicity():
     ethnicity_counts = df['Ethnicity'].value_counts()
@@ -65,6 +66,14 @@ def plot_jaundice():
                  color_discrete_sequence=custom_colors,
                  labels={'Jaundice': 'Jaundice', 'Count': 'Count', 'Class/ASD': 'ASD Diagnosis'})
     fig.update_layout(title='ASD by Jaundice', xaxis_title='Jaundice', yaxis_title='Count')
+    st.plotly_chart(fig)
+    
+def plot_geneticRoot():
+    geneticRoot_counts = df.groupby(['Genetic Root', 'Class/ASD']).size().reset_index(name='Count')
+    fig = px.bar(geneticRoot_counts, x='Genetic Root', y='Count', color='Class/ASD', barmode='group',
+                 color_discrete_sequence=custom_colors,
+                 labels={'Genetic Root': 'Genetic Root', 'Count': 'Count', 'Class/ASD': 'ASD Diagnosis'})
+    fig.update_layout(title='ASD by Genetic Root', xaxis_title='Genetic Root', yaxis_title='Count')
     st.plotly_chart(fig)
 
 display_analysis()
