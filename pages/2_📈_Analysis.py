@@ -22,7 +22,7 @@ def display_analysis():
     plot_gender()
     plot_age()
     plot_country_of_residence()
-
+    plot_jaundice()
 
 def plot_ethnicity():
     ethnicity_counts = df['Ethnicity'].value_counts()
@@ -57,5 +57,13 @@ def plot_country_of_residence():
     fig.update_layout(width=800, height=600, margin=dict(t=30, l=0, r=0, b=0))
     fig.update_layout(clickmode='event+select')  # Enable click events on the chart
     st.plotly_chart(fig)
-
+    
+def plot_jaundice():
+    jaundice_counts = df.groupby(['Jaundice', 'Class/ASD']).size().reset_index(name='Count')
+    fig = px.bar(jaundice_counts, x='Jaundice', y='Count', color='Class/ASD', barmode='group',
+                 color_discrete_sequence=custom_colors,
+                 labels={'Jaundice': 'Jaundice', 'Count': 'Count', 'Class/ASD': 'ASD Diagnosis'})
+    fig.update_layout(title='ASD by Jaundice', xaxis_title='Jaundice', yaxis_title='Count')
+    st.plotly_chart(fig)
+    
 display_analysis()
